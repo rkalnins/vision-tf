@@ -10,6 +10,10 @@ import edu.wpi.first.wpilibj.command.Subsystem;
 import frc.team2767.visiontf.Robot;
 import frc.team2767.visiontf.command.TeleOpDriveCommand;
 import io.reactivex.schedulers.Schedulers;
+import java.util.Collections;
+import java.util.EnumSet;
+import java.util.Set;
+import java.util.function.DoubleSupplier;
 import org.jetbrains.annotations.NotNull;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -22,11 +26,6 @@ import org.strykeforce.thirdcoast.swerve.Wheel;
 import org.strykeforce.thirdcoast.telemetry.TelemetryService;
 import org.strykeforce.thirdcoast.telemetry.grapher.Measure;
 import org.strykeforce.thirdcoast.telemetry.item.Item;
-
-import java.util.Collections;
-import java.util.EnumSet;
-import java.util.Set;
-import java.util.function.DoubleSupplier;
 
 public class DriveSubsystem extends Subsystem implements Item {
 
@@ -59,9 +58,7 @@ public class DriveSubsystem extends Subsystem implements Item {
   }
 
   @Override
-  public void periodic() {
-    //    logger.debug("{}", getYaw());
-  }
+  public void periodic() {}
 
   public void setDriveMode(DriveMode mode) {
     logger.debug("setting drive mode to {}", mode);

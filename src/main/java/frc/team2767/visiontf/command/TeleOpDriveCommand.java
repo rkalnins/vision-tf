@@ -1,13 +1,13 @@
 package frc.team2767.visiontf.command;
 
+import static org.strykeforce.thirdcoast.swerve.SwerveDrive.DriveMode.TELEOP;
+
 import edu.wpi.first.wpilibj.command.Command;
 import frc.team2767.visiontf.Robot;
 import frc.team2767.visiontf.control.DriverControls;
 import frc.team2767.visiontf.subsystem.DriveSubsystem;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import static org.strykeforce.thirdcoast.swerve.SwerveDrive.DriveMode.TELEOP;
 
 public final class TeleOpDriveCommand extends Command {
   private static final double DEADBAND = 0.05;

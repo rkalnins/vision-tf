@@ -5,13 +5,12 @@ import edu.wpi.first.wpilibj.command.Scheduler;
 import frc.team2767.visiontf.control.Controls;
 import frc.team2767.visiontf.subsystem.DriveSubsystem;
 import io.reactivex.disposables.Disposable;
+import java.util.Date;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.strykeforce.thirdcoast.deadeye.DeadeyeService;
 import org.strykeforce.thirdcoast.telemetry.TelemetryController;
 import org.strykeforce.thirdcoast.telemetry.TelemetryService;
-
-import java.util.Date;
 
 public class Robot extends TimedRobot {
   public static final TelemetryService TELEMETRY = new TelemetryService(TelemetryController::new);
@@ -28,9 +27,6 @@ public class Robot extends TimedRobot {
     logger.info("Today is {}", new Date());
     TELEMETRY.start();
     DEADEYE_SERVICE.enableConnectionEventLogging(true);
-    //    DEADEYE_SERVICE
-    //        .getMessageObservable()
-    //        .subscribe(deadeyeMessage -> logger.info(deadeyeMessage.toString()));
   }
 
   @Override
